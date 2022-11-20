@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import { Button } from 'teleturbis-component-lib';
+// import { Button } from 'teleturbis-component-lib';
 
 export async function getStaticProps(obj: { locale: string }) {
   const { locale } = obj;
@@ -18,7 +18,7 @@ export async function getStaticProps(obj: { locale: string }) {
 export default function Home(props: any) {
   const { t } = useTranslation();
 
-  console.log(Button);
+  // console.log(Button);
 
   return (
     <div className={styles.container}>
