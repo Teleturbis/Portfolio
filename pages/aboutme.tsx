@@ -3,9 +3,9 @@ import styles from '../styles/Home.module.scss';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
-import Hero from '../components/hero/Hero';
-import Navigation from '../components/navigation/Navigation';
+import About from '../components/about/About';
 import Footer from '../components/footer/Footer';
+import NavigationSmall from '../components/navigation/NavigationSmall';
 
 export async function getStaticProps(obj: { locale: string }) {
   const { locale } = obj;
@@ -23,10 +23,10 @@ export default function Home(props: any): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Kevin Poppe - Webentwickler</title>
+        <title>Kevin Poppe - Über mich</title>
         <meta
           name='description'
-          content='Portfolio von Kevin Poppe - Webentwickler'
+          content='Portfolio von Kevin Poppe - Webentwickler | Über mich'
         />
         <link rel='icon' href='/favicon.ico' />
         <link
@@ -54,13 +54,10 @@ export default function Home(props: any): JSX.Element {
 
       <main className={styles.mainDiv}>
         <section>
-          <Hero
-            headline={t('home:headline')}
-            subHeadline={t('home:subHeadline')}
-          />
+          <NavigationSmall />
         </section>
         <section>
-          <Navigation />
+          <About />
         </section>
       </main>
 

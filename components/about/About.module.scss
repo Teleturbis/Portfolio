@@ -1,0 +1,69 @@
+.main {
+  height: 70vh;
+  border-radius: 0.4rem;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  padding: 5rem;
+
+  display: flex;
+  gap: 5rem;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.profilePicture {
+  width: 30rem;
+  border-radius: 1rem;
+
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+
+.rightDiv {
+  margin-left: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.location {
+  height: 330px;
+
+  display: flex;
+  justify-content: space-between;
+
+  .description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    padding-right: 2rem;
+    padding-top: 3rem;
+
+    h3 {
+      font-size: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .map {
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    background-color: tomato;
+
+    @media (max-width: 768px) {
+      display: none !important;
+    }
+  }
+}
