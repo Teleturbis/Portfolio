@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Skills.module.scss';
 import { useTranslation } from 'next-i18next';
@@ -33,10 +33,38 @@ const POSITIONS: (string | number | any)[][] = [
   [siGit, 'x', -125, 'y', 216.51],
 ];
 
+const useMediaQuery = (width: any) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e: any) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
+
 export default function About() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(false);
+
+  const isBreakpoint = useMediaQuery(768);
 
   return (
     <main className={`${styles.main}`}>
@@ -56,8 +84,8 @@ export default function About() {
             key={index}
             initial={{ opacity: 0 }}
             animate={{
-              [v1]: isOpen ? t1 : 0,
-              [v2]: isOpen ? t2 : 0,
+              [v1]: isOpen ? (isBreakpoint ? t1 / 2 : t1) : 0,
+              [v2]: isOpen ? (isBreakpoint ? t2 / 2 : t2) : 0,
               opacity: isOpen ? 1 : 0,
               scale: isOpen ? 1 : 0,
             }}

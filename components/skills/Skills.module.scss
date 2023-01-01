@@ -31,11 +31,21 @@
   width: 80px;
   position: absolute;
   zindex: 5;
+
+  @media (max-width: 768px) {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .img {
   width: 150px;
+
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 100px;
   }
 }
