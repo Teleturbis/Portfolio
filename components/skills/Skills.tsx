@@ -68,7 +68,7 @@ export default function About() {
 
   return (
     <main className={`${styles.main}`}>
-      <h2>Meine Tech-Skills</h2>
+      <h2>Meine wichtigsten Tech-Skills</h2>
       <motion.div
         className={styles.skillsDiv}
         initial={{ scale: 0, rotate: 0 }}

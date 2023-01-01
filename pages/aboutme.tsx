@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 import About from '../components/about/About';
 import Footer from '../components/footer/Footer';
 import NavigationSmall from '../components/navigation/NavigationSmall';
+import { useEffect } from 'react';
 
 export async function getStaticProps(obj: { locale: string }) {
   const { locale } = obj;
@@ -19,6 +20,18 @@ export async function getStaticProps(obj: { locale: string }) {
 
 export default function Home(props: any): JSX.Element {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (document) {
+      document.addEventListener('visibilitychange', (event) => {
+        if (document.visibilityState == 'visible') {
+          document.title = 'Kevin Poppe - Über mich ';
+        } else {
+          document.title = 'Ich vermisse dich 🥺';
+        }
+      });
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
