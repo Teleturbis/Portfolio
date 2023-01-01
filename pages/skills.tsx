@@ -1,11 +1,25 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 import Footer from '../components/footer/Footer';
 import NavigationSmall from '../components/navigation/NavigationSmall';
 import Skills from '../components/skills/Skills';
 
+export async function getStaticProps(obj: { locale: string }) {
+  const { locale } = obj;
+  return {
+    props: {
+      locale,
+      ...(await serverSideTranslations(locale, ['common', 'aboutMe'])),
+    },
+  };
+}
+
 export default function App() {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.container}>
       <Head>
