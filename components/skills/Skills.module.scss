@@ -136,12 +136,12 @@
   .softskillBar {
     height: 1.55rem;
     margin: -0.025rem 0 -0.025rem -0.05rem;
-    background-color: blue;
+    background-color: rgb(172, 172, 172);
     padding: 0.25rem 0 0.25rem 0.5rem;
-    border-radius: 0.4rem;
+    border-radius: 0 1rem 1rem 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid black;
+    color: rgb(41, 41, 41);
   }
 }
