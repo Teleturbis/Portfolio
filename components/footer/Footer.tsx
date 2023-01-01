@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 
-import Npm from './Npm.jsx';
-import LinkedIn from './LinkedIn.jsx';
-import Instagram from './Instagram.jsx';
-import GitHub from './GitHub.jsx';
+import Npm from './Npm';
+import LinkedIn from './LinkedIn';
+import Instagram from './Instagram';
+import GitHub from './GitHub';
 
 const logo = 'android-chrome-512x512.png';
 
