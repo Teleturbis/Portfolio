@@ -1,20 +1,28 @@
 .main {
-  height: 70vh;
+  height: 80vh;
   border-radius: 0.4rem;
   background-color: rgb(26, 26, 26);
   color: white;
   padding: 0rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   margin: 0;
 
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   position: relative;
 
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    justify-content: space-around;
+    padding-top: 0;
+  }
 }
 
 .skillsDiv {
@@ -24,6 +32,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: -15rem;
+
+  @media (max-width: 768px) {
+    top: 0;
+  }
 }
 
 .icon {
