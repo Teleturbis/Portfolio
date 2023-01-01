@@ -15,7 +15,7 @@ export default function Navigation() {
         <Link className={styles.link} href='/aboutme'>
           {t('aboutme')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/skills'>
           {t('skills')}
         </Link>
         <Link className={styles.link} href='/'>
