@@ -61,7 +61,6 @@ const useMediaQuery = (width: any) => {
 
 export default function About() {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
 
   const isBreakpoint = useMediaQuery(1320);
   const softskills: (string | number)[][] = [
@@ -118,9 +117,11 @@ export default function About() {
         <h2>{t('skills:softskills.title')}</h2>
         <div className={styles.softskillsDiv}>
           {softskills.map(([title, x], index) => (
-            <div className={styles.softskillsOutterbar}>
+            <div
+              key={`${index}${new Date()}`}
+              className={styles.softskillsOutterbar}
+            >
               <motion.div
-                key={`${index}${new Date()}`}
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{
