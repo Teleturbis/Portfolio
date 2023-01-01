@@ -13,7 +13,7 @@ export async function getStaticProps(obj: { locale: string }) {
   return {
     props: {
       locale,
-      ...(await serverSideTranslations(locale, ['common', 'aboutMe'])),
+      ...(await serverSideTranslations(locale, ['common', 'skills'])),
     },
   };
 }

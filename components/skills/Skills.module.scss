@@ -7,21 +7,64 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   margin: 0;
-
   display: flex;
   flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  @media (max-width: 1000px) {
+    height: 100vh;
+    justify-content: space-around;
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
+    height: 140vh;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 12rem;
+  }
+}
+
+.seperatorLeft {
+  height: 100%;
+  width: 50%;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  position: relative;
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 50%;
+    justify-content: flex-start;
+    gap: 8rem;
+    padding-top: 2rem;
+  }
 
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    height: 50vh;
-    justify-content: space-around;
+  @media (max-width: 500px) {
+    height: 20%;
     padding-top: 0;
+  }
+}
+
+.seperatorRight {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10rem;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 50%;
+    gap: 2rem;
   }
 }
 
@@ -34,7 +77,7 @@
   align-items: center;
   top: -15rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     top: 0;
   }
 }
@@ -43,9 +86,9 @@
   height: 80px;
   width: 80px;
   position: absolute;
-  zindex: 5;
+  z-index: 5;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1320px) {
     height: 40px;
     width: 40px;
   }
@@ -53,12 +96,52 @@
 
 .img {
   width: 150px;
+  position: relative;
+  z-index: 15;
 
-  &:hover {
-    cursor: pointer;
+  @media (max-width: 1000px) {
+    width: 100px;
+  }
+}
+
+.softskillsDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 65%;
+  padding: 2rem;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+    padding: 0;
+    gap: 1rem;
   }
 
-  @media (max-width: 768px) {
-    width: 100px;
+  @media (max-width: 500px) {
+    width: 80%;
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .softskillsOutterbar {
+    height: 2rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .softskillBar {
+    height: 1.55rem;
+    margin: -0.025rem 0 -0.025rem -0.05rem;
+    background-color: blue;
+    padding: 0.25rem 0 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
   }
 }
