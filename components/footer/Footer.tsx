@@ -15,10 +15,10 @@ export default function Footer() {
   return (
     <main className={`${styles.main}`}>
       <div className={styles.linksDiv}>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/aboutme'>
           {t('aboutme')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/skills'>
           {t('skills')}
         </Link>
         <Link className={styles.link} href='/'>
@@ -27,7 +27,7 @@ export default function Footer() {
         <Link className={styles.link} href='/'>
           {t('contact')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/disclaimer'>
           {t('impressum')}
         </Link>
         <a className={styles.link} href='mailto:kevin@kevinpoppe.com'>
