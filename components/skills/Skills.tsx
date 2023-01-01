@@ -105,7 +105,7 @@ export default function About() {
         <motion.img
           src='/android-chrome-512x512.png'
           alt='head'
-          animate={{ scale: isOpen ? 1.2 : 1, opacity: isOpen ? 1 : 0.5 }}
+          animate={{ scale: !isOpen ? 1.2 : 1, opacity: !isOpen ? 1 : 0.5 }}
           whileHover={{ scale: 1.1, opacity: 0.8 }}
           transition={{
             delay: 0.25,
