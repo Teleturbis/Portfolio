@@ -16,14 +16,14 @@
   text-align: center;
 
   @media (max-width: 1000px) {
-    height: 100vh;
+    height: 56rem;
     justify-content: space-around;
     padding-top: 0;
     flex-direction: column;
   }
 
   @media (max-width: 500px) {
-    height: 140vh;
+    height: 78rem;
     justify-content: flex-start;
     padding-top: 2rem;
     gap: 12rem;
