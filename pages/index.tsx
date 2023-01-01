@@ -12,7 +12,7 @@ export async function getStaticProps(obj: { locale: string }) {
   return {
     props: {
       locale,
-      ...(await serverSideTranslations(locale, ['home'])),
+      ...(await serverSideTranslations(locale, ['common', 'aboutMe'])),
     },
   };
 }
@@ -54,10 +54,7 @@ export default function Home(props: any): JSX.Element {
 
       <main className={styles.mainDiv}>
         <section>
-          <Hero
-            headline={t('home:headline')}
-            subHeadline={t('home:subHeadline')}
-          />
+          <Hero headline={t('headline')} subHeadline={t('subHeadline')} />
         </section>
         <section>
           <Navigation />

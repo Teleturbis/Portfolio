@@ -40,8 +40,8 @@ export default function Hero(props: Props): JSX.Element {
   const isBreakpoint = useMediaQuery(768);
 
   let hero = isBreakpoint
-    ? 'https://images.unsplash.com/photo-1562907550-096d3bf9b25c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80'
-    : 'https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80';
+    ? '/images/heroMobile.webp'
+    : '/images/heroDesktop.webp';
 
   return (
     <Parallax

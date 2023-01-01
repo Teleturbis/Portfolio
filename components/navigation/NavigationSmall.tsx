@@ -1,25 +1,28 @@
 import Link from 'next/link';
 import styles from './Navigation.module.scss';
+import { useTranslation } from 'next-i18next';
 
 export default function Navigation() {
+  const { t } = useTranslation();
+
   return (
     <main className={`${styles.mainSmall}`}>
       <img src='android-chrome-512x512.png' alt='Initials' />
       <div className={styles.navLinks}>
         <Link className={styles.link} href='/'>
-          Start
+          {t('start')}
         </Link>
         <Link className={styles.link} href='/aboutme'>
-          Über mich
+          {t('aboutme')}
         </Link>
         <Link className={styles.link} href='/'>
-          Skills
+          {t('skills')}
         </Link>
         <Link className={styles.link} href='/'>
-          Projekte
+          {t('projects')}
         </Link>
         <Link className={styles.link} href='/'>
-          Kontakt
+          {t('contact')}
         </Link>
       </div>
     </main>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
+import { useTranslation } from 'next-i18next';
 
 import Npm from './Npm';
 import LinkedIn from './LinkedIn';
@@ -9,26 +10,28 @@ import GitHub from './GitHub';
 const logo = 'android-chrome-512x512.png';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <main className={`${styles.main}`}>
       <div className={styles.linksDiv}>
         <Link className={styles.link} href='/'>
-          Über mich
+          {t('aboutme')}
         </Link>
         <Link className={styles.link} href='/'>
-          Skills
+          {t('skills')}
         </Link>
         <Link className={styles.link} href='/'>
-          Projekte
+          {t('projects')}
         </Link>
         <Link className={styles.link} href='/'>
-          Kontakt
+          {t('contact')}
         </Link>
         <Link className={styles.link} href='/'>
-          Impressum
+          {t('impressum')}
         </Link>
         <a className={styles.link} href='mailto:kevin@kevinpoppe.com'>
-          Email
+          {t('mail')}
         </a>
       </div>
 
