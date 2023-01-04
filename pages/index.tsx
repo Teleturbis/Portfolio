@@ -48,6 +48,11 @@ const useMediaQuery = (width: any) => {
 export default function Home(props: any): JSX.Element {
   const { t } = useTranslation();
   const isBreakpoint = useMediaQuery(768);
+  const [modal, setModal] = useState(true);
+
+  function handleClose() {
+    setModal(false);
+  }
 
   useEffect(() => {
     if (document) {
@@ -109,6 +114,31 @@ export default function Home(props: any): JSX.Element {
       <footer className={styles.footer}>
         <Footer />
       </footer>
+
+      {/* Modal */}
+      {modal && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Hey!</h2>
+            <p>
+              Diese Seite befindet sich noch im Aufbau. Gerne kannst du sie dir
+              aber schon im aktuellen Zustand anschauen.
+            </p>
+            <p>
+              This page is still under construction. You can already take a look
+              at it in its current state.
+            </p>
+            <div>
+              <p>Beste Grüße | Best regards</p>
+              <p>Kevin</p>
+            </div>
+
+            <button className={styles.closeModal} onClick={handleClose}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
