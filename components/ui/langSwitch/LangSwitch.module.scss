@@ -29,4 +29,11 @@ $borderWidth: 3px;
   display: inline-block;
   border-radius: 0.5rem;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    .label {
+      padding: 0.2rem 0.3rem;
+      font-size: 0.8rem;
+    }
+  }
 }

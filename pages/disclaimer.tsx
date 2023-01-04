@@ -2,11 +2,11 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useEffect, useCallback, useState } from 'react';
 
 import Footer from '../components/footer/Footer';
 import NavigationSmall from '../components/navigation/NavigationSmall';
-import Skills from '../components/skills/Skills';
-import { useEffect } from 'react';
+import MiniNavigation from '../components/navigation/MiniNavigation';
 
 export async function getStaticProps(obj: { locale: string }) {
   const { locale } = obj;
@@ -18,8 +18,35 @@ export async function getStaticProps(obj: { locale: string }) {
   };
 }
 
+const useMediaQuery = (width: any) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e: any) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
+
 export default function App(props: any): JSX.Element {
   const { t } = useTranslation();
+  const isBreakpoint = useMediaQuery(768);
 
   useEffect(() => {
     if (document) {
@@ -67,7 +94,11 @@ export default function App(props: any): JSX.Element {
 
       <main className={styles.mainDiv}>
         <section>
-          <NavigationSmall locale={props.locale} />
+          {isBreakpoint ? (
+            <MiniNavigation locale={props.locale} />
+          ) : (
+            <NavigationSmall locale={props.locale} />
+          )}
         </section>
         <section className={`${styles.impressum}`}>
           <div>

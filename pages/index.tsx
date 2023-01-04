@@ -2,10 +2,11 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import { useEffect } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 
 import Hero from '../components/hero/Hero';
 import Navigation from '../components/navigation/Navigation';
+import MiniNavigation from '../components/navigation/MiniNavigation';
 import Footer from '../components/footer/Footer';
 
 export async function getStaticProps(obj: { locale: string }) {
@@ -18,8 +19,35 @@ export async function getStaticProps(obj: { locale: string }) {
   };
 }
 
+const useMediaQuery = (width: any) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e: any) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
+
 export default function Home(props: any): JSX.Element {
   const { t } = useTranslation();
+  const isBreakpoint = useMediaQuery(768);
 
   useEffect(() => {
     if (document) {
@@ -70,7 +98,11 @@ export default function Home(props: any): JSX.Element {
           <Hero headline={t('headline')} subHeadline={t('subHeadline')} />
         </section>
         <section>
-          <Navigation locale={props.locale} />
+          {isBreakpoint ? (
+            <MiniNavigation locale={props.locale} />
+          ) : (
+            <Navigation locale={props.locale} />
+          )}
         </section>
       </main>
 
