@@ -5,11 +5,11 @@ module.exports = {
 
     domains: [
       {
-        domain: 'erpel.com',
+        domain: 'kevinpoppe.com/en',
         defaultLocale: 'en',
       },
       {
-        domain: 'erpel.de',
+        domain: 'kevinpoppe.com',
         defaultLocale: 'de',
         locales: ['at', 'ch'],
       },
