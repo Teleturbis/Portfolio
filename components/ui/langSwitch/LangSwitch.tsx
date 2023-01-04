@@ -23,7 +23,8 @@ export default function LangSwitch(props: Props): JSX.Element {
     let path: string[] = document.location.pathname
       .split('/')
       .filter((p) => p !== '');
-    path = path[0] == 'de' || path[0] == 'en' ? path.slice(1, 1) : path;
+
+    if (path.length > 1) path.splice(0, 1);
 
     const newPath = path.join('/');
 

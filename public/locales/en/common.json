@@ -1,1 +1,11 @@
-{ "headline": "Kevin Poppe", "subHeadline": "Web Developer" }
+{
+  "headline": "Kevin Poppe",
+  "subHeadline": "Web Developer",
+  "aboutme": "About me",
+  "skills": "Skills",
+  "projects": "Projects",
+  "contact": "Contact",
+  "start": "Start",
+  "impressum": "Imprint",
+  "mail": "E-Mail"
+}
