@@ -27,10 +27,10 @@ export default function Navigation(props: Props): JSX.Element {
         <Link className={styles.link} href='/skills'>
           {t('skills')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/projects'>
           {t('projects')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/contact'>
           {t('contact')}
         </Link>
       </div>

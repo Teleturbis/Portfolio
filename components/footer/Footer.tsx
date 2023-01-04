@@ -21,10 +21,10 @@ export default function Footer() {
         <Link className={styles.link} href='/skills'>
           {t('skills')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/projects'>
           {t('projects')}
         </Link>
-        <Link className={styles.link} href='/'>
+        <Link className={styles.link} href='/contact'>
           {t('contact')}
         </Link>
         <Link className={styles.link} href='/disclaimer'>
