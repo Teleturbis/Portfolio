@@ -1,0 +1,20 @@
+{
+  "techskills": {
+    "title": "My technical skills"
+  },
+  "softskills": {
+    "title": "My soft skills",
+    "learning": "Willingness to learn",
+    "flexibility": "Flexibility",
+    "reliability": "Reliability",
+    "responsibility": "Responsibility",
+    "teamwork": "Teamwork",
+    "communication": "Communication",
+    "empathy": "Empathy",
+    "creativity": "Creativity",
+    "self-employed": "Independence",
+    "problem-solving": "Problem solving",
+    "organization": "Organization",
+    "analytical": "Analytical skills"
+  }
+}
