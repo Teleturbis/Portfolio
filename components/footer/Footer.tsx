@@ -7,7 +7,7 @@ import LinkedIn from './LinkedIn';
 import Instagram from './Instagram';
 import GitHub from './GitHub';
 
-const logo = 'android-chrome-512x512.png';
+const logo = '/android-chrome-512x512.png';
 
 export default function Footer() {
   const { t } = useTranslation();
