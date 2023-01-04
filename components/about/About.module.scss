@@ -1,5 +1,5 @@
 .main {
-  height: 70vh;
+  height: 45rem;
   border-radius: 0.4rem;
   background-color: rgb(26, 26, 26);
   color: white;
@@ -11,6 +11,12 @@
   position: relative;
 
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+  }
 }
 
 .profilePicture {
@@ -21,6 +27,10 @@
   position: absolute;
   top: -1rem;
   left: -1rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .rightDiv {
@@ -29,13 +39,23 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 }
 
 .location {
-  height: 330px;
+  height: 20.625rem;
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 30rem;
+    gap: 2rem;
+  }
 
   .description {
     width: 50%;
@@ -53,6 +73,11 @@
       padding: 0;
       margin: 0;
     }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-right: 0;
+    }
   }
 
   .map {
@@ -60,11 +85,5 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-
-    background-color: tomato;
-
-    @media (max-width: 768px) {
-      display: none !important;
-    }
   }
 }

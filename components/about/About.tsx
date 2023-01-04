@@ -23,7 +23,7 @@ export default function About() {
           </div>
           <div className={styles.map}>
             <Map
-              height={330}
+              height={335}
               defaultCenter={[49.771974, 9.330175]}
               defaultZoom={9}
               provider={stamenToner}
