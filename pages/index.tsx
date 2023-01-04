@@ -2,11 +2,11 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useEffect } from 'react';
 
 import Hero from '../components/hero/Hero';
 import Navigation from '../components/navigation/Navigation';
 import Footer from '../components/footer/Footer';
-import { useEffect } from 'react';
 
 export async function getStaticProps(obj: { locale: string }) {
   const { locale } = obj;
@@ -70,7 +70,7 @@ export default function Home(props: any): JSX.Element {
           <Hero headline={t('headline')} subHeadline={t('subHeadline')} />
         </section>
         <section>
-          <Navigation />
+          <Navigation locale={props.locale} />
         </section>
       </main>
 

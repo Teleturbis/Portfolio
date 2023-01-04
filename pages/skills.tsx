@@ -18,7 +18,7 @@ export async function getStaticProps(obj: { locale: string }) {
   };
 }
 
-export default function App() {
+export default function App(props: any): JSX.Element {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function App() {
 
       <main className={styles.mainDiv}>
         <section>
-          <NavigationSmall />
+          <NavigationSmall locale={props.locale} />
         </section>
         <section>
           <Skills />

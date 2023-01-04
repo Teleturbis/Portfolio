@@ -67,7 +67,7 @@ export default function Home(props: any): JSX.Element {
 
       <main className={styles.mainDiv}>
         <section>
-          <NavigationSmall />
+          <NavigationSmall locale={props.locale} />
         </section>
         <section>
           <About />

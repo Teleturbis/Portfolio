@@ -2,7 +2,13 @@ import Link from 'next/link';
 import styles from './Navigation.module.scss';
 import { useTranslation } from 'next-i18next';
 
-export default function Navigation() {
+import LangSwitch from '../ui/langSwitch/LangSwitch';
+
+interface Props {
+  locale: string;
+}
+
+export default function Navigation(props: Props): JSX.Element {
   const { t } = useTranslation();
 
   return (
@@ -24,6 +30,7 @@ export default function Navigation() {
         <Link className={styles.link} href='/'>
           {t('contact')}
         </Link>
+        <LangSwitch locale={props.locale} />
       </div>
     </main>
   );

@@ -5,7 +5,13 @@ import { Map, Marker } from 'pigeon-maps';
 import { stamenToner } from 'pigeon-maps/providers';
 import { useTranslation } from 'next-i18next';
 
-export default function Navigation() {
+import LangSwitch from '../ui/langSwitch/LangSwitch';
+
+interface Props {
+  locale: string;
+}
+
+export default function Navigation(props: Props): JSX.Element {
   const { t } = useTranslation();
 
   return (
@@ -38,6 +44,7 @@ export default function Navigation() {
           <Link className={styles.link} href='/'>
             {t('contact')}
           </Link>
+          <LangSwitch locale={props.locale} />
         </div>
         <div className={styles.map}>
           <Map
