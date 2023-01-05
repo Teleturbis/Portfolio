@@ -6,7 +6,6 @@ import { useEffect, useCallback, useState } from 'react';
 
 import NavigationSmall from '../components/navigation/NavigationSmall';
 import MiniNavigation from '../components/navigation/MiniNavigation';
-import Footer from '../components/footer/Footer';
 import Error from '../components/404/Error';
 
 export async function getStaticProps(obj: { locale: string }) {
@@ -105,10 +104,6 @@ export default function Home(props: any): JSX.Element {
           <Error />
         </section>
       </main>
-
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
     </div>
   );
 }

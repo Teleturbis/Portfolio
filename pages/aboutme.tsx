@@ -5,7 +5,6 @@ import { useTranslation } from 'next-i18next';
 import { useEffect, useCallback, useState } from 'react';
 
 import About from '../components/about/About';
-import Footer from '../components/footer/Footer';
 import NavigationSmall from '../components/navigation/NavigationSmall';
 import MiniNavigation from '../components/navigation/MiniNavigation';
 
@@ -105,10 +104,6 @@ export default function Home(props: any): JSX.Element {
           <About />
         </section>
       </main>
-
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
     </div>
   );
 }

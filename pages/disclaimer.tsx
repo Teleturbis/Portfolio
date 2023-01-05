@@ -4,7 +4,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useCallback, useState } from 'react';
 
-import Footer from '../components/footer/Footer';
 import NavigationSmall from '../components/navigation/NavigationSmall';
 import MiniNavigation from '../components/navigation/MiniNavigation';
 
@@ -229,10 +228,6 @@ export default function App(props: any): JSX.Element {
           </div>
         </section>
       </main>
-
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
 
       <div />
     </div>
