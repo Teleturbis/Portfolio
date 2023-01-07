@@ -20,7 +20,7 @@ export default function Footer() {
       method: 'post',
       url: 'https://portfolio-be-production-0fb4.up.railway.app/subscribe',
       data: {
-        email: 'kevin.poppe93@gmail.com',
+        email: mail,
         firstname: 'Kevin',
         lastname: 'Poppe',
         apiKey: 'QneE%afc<$-§yEVu}Z6>y<§aMs+SjJaSYnzrxQhgMeT',
