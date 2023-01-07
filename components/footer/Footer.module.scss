@@ -13,6 +13,12 @@
   @media (max-width: 768px) {
     padding: 2.5rem 2.5rem 3.5rem 2.5rem;
     gap: 0;
+    height: 25rem;
+
+    display: grid;
+    grid-template-areas:
+      'a a'
+      'b c';
   }
 }
 
@@ -20,14 +26,98 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 100%;
+  grid-area: a;
 
   img {
+    position: absolute;
+    left: 25%;
     width: 50%;
+    opacity: 0.2;
+  }
+
+  .logoSubscribeForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
   }
 
   @media (max-width: 768px) {
     img {
       display: none;
+    }
+
+    .logoSubscribeForm {
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.subscribeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  .subscribeInput {
+    width: 75%;
+    display: inline-block;
+    border: 0 solid black;
+    background-color: #3f3f3f;
+    height: 2rem;
+    border-radius: 0.4rem 0 0 0.4rem;
+    padding: 0;
+    padding-left: 1rem;
+    outline: none;
+    font-size: 1.25rem;
+    font-family: 'Asap', sans-serif;
+    transition: 150ms;
+    color: #fff;
+
+    &:focus {
+      background-color: #5e5e5e;
+    }
+  }
+
+  .subscribeButton {
+    width: 25%;
+    display: inline-block;
+    border: 0 solid black;
+    background-color: #3f3f3f;
+    height: 2rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    font-size: 1.25rem;
+    font-family: 'Asap', sans-serif;
+    padding: 0 0.5rem;
+    transition: 150ms;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #5e5e5e;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .subscribeInput {
+      height: 1.5rem;
+      width: 65%;
+      font-size: 1rem;
+    }
+
+    .subscribeButton {
+      height: 1.5rem;
+      width: 35%;
+      font-size: 1rem;
     }
   }
 }
@@ -39,7 +129,8 @@
   justify-content: space-around;
   height: fit-content;
   margin-left: 0;
-  width: 10rem;
+  width: 6rem;
+  grid-area: b;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -53,9 +144,8 @@
   text-decoration: none;
   font-family: 'AsapBold', sans-serif;
   color: white;
-  width: 7rem;
+  width: 5rem;
   height: 2rem;
-  border-radius: 0.4rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -71,6 +161,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 10rem;
+  grid-area: c;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
@@ -79,6 +170,8 @@
 
 .listItem {
   list-style: none;
+  display: flex;
+  justify-content: flex-end;
 
   a {
     display: flex;
@@ -89,6 +182,7 @@
     transition: 250ms;
     text-decoration: none;
     color: white;
+    width: 4.5rem;
 
     svg {
       width: 3rem;

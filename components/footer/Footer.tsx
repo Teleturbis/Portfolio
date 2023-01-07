@@ -36,6 +36,20 @@ export default function Footer() {
       </div>
 
       <div className={styles.logoDiv}>
+        <div className={styles.logoSubscribeForm}>
+          <div className={styles.subscribeDiv}>
+            <input
+              className={styles.subscribeInput}
+              type='text'
+              placeholder='E-Mail Adresse'
+            />
+            <button className={styles.subscribeButton}>Anmelden</button>
+          </div>
+          <p>
+            Melde dich zu meinem Newsletter an, um keine Neuen Projekte zu
+            verpassen!
+          </p>
+        </div>
         <img src={logo} alt='Initials' />
       </div>
 
