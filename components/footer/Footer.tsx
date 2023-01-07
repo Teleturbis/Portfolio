@@ -1,16 +1,47 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { useTranslation } from 'next-i18next';
+import React, { useState } from 'react';
 
 import Npm from './Npm';
 import LinkedIn from './LinkedIn';
 import Instagram from './Instagram';
 import GitHub from './GitHub';
+import axios from 'axios';
 
 const logo = '/android-chrome-512x512.png';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const [mail, setMail] = useState('');
+
+  async function subscribe() {
+    await axios({
+      method: 'post',
+      url: 'https://portfolio-be-production-0fb4.up.railway.app/subscribe',
+      data: {
+        email: 'kevin.poppe93@gmail.com',
+        firstname: 'Kevin',
+        lastname: 'Poppe',
+        apiKey: 'QneE%afc<$-§yEVu}Z6>y<§aMs+SjJaSYnzrxQhgMeT',
+      },
+    })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  function changeHandler(e: any) {
+    if (e.key === 'Enter') {
+      subscribe();
+      return;
+    }
+
+    setMail(e.target.value);
+  }
 
   return (
     <main className={`${styles.main}`}>
@@ -42,8 +73,16 @@ export default function Footer() {
               className={styles.subscribeInput}
               type='text'
               placeholder='E-Mail Adresse'
+              value={mail}
+              onChange={(e) => changeHandler(e)}
+              onKeyUp={(e) => changeHandler(e)}
             />
-            <button className={styles.subscribeButton}>Anmelden</button>
+            <button
+              className={styles.subscribeButton}
+              onClick={() => subscribe()}
+            >
+              Anmelden
+            </button>
           </div>
           <p>
             Melde dich zu meinem Newsletter an, um keine Neuen Projekte zu
