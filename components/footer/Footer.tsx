@@ -28,6 +28,7 @@ export default function Footer() {
     })
       .then((response) => {
         console.log(response.data);
+        setMail('');
       })
       .catch((error) => {
         console.log(error);
