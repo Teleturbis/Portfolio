@@ -26,7 +26,7 @@ export default function Projects() {
           project.tags.forEach((tag: any) => {
             selectedTags.forEach((selectedTag: any) => {
               if (tag.sys.id === selectedTag.tagId) {
-                // check if project is already in temp
+                // check if project is already in temp 
                 let alreadyIn = false;
                 temp.forEach((el: any) => {
                   if (el.title === project.title) {
