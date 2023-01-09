@@ -8,8 +8,8 @@ import ProjectCard from './ProjectCard';
 export default function Projects() {
   const { t } = useTranslation();
   const [projects, setProjects] = useState<any[]>([]);
-  const [tags, setTags] = useState([]);
-  const [filteredProjects, setFilteredProjects] = useState([]);
+  const [tags, setTags] = useState<any[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<any[]>([]);
   const [selectedTags, setSelectedTags] = useState<any[]>([]);
 
   useEffect(() => {
