@@ -21,8 +21,8 @@ export default function Footer() {
       url: 'https://portfolio-be-production-0fb4.up.railway.app/subscribe',
       data: {
         email: mail,
-        firstname: 'Kevin',
-        lastname: 'Poppe',
+        firstname: null,
+        lastname: null,
         apiKey: 'QneE%afc<$-§yEVu}Z6>y<§aMs+SjJaSYnzrxQhgMeT',
       },
     })

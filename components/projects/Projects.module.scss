@@ -1,0 +1,121 @@
+.main {
+  border-radius: 0.4rem;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  padding: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  position: relative;
+
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+  }
+}
+
+.tagsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .buttonUnselected {
+    font-size: 1rem;
+    color: rgb(209, 209, 209);
+    background-color: transparent;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 0.2rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    font-family: 'Asap', sans-serif;
+
+    &:hover {
+      color: #fff;
+      background-color: rgb(87, 87, 87);
+    }
+  }
+
+  .buttonSelected {
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgb(99, 99, 99);
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 0.2rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    font-family: 'Asap', sans-serif;
+
+    &:hover {
+      color: #fff;
+      background-color: rgb(87, 87, 87);
+    }
+  }
+}
+
+.projectCardsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.projectCard {
+  width: 15rem;
+  height: 20rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(66, 66, 66);
+  transition: 500ms;
+  display: inline-block;
+
+  &:hover {
+    background-color: rgb(94, 94, 94);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .cardImage {
+    width: 100%;
+    border-radius: 0.2rem;
+  }
+
+  .cardDiv {
+    height: 11.5rem;
+    position: relative;
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .cardDescription {
+    margin-top: 1rem;
+  }
+
+  .cardTagsDiv {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cardTags {
+    font-size: 0.7rem;
+    color: rgb(209, 209, 209);
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+    font-family: 'Asap', sans-serif;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
