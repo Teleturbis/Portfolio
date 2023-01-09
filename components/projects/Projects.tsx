@@ -7,7 +7,7 @@ import ProjectCard from './ProjectCard';
 
 export default function Projects() {
   const { t } = useTranslation();
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<any[]>([]);
   const [tags, setTags] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [selectedTags, setSelectedTags] = useState<any[]>([]);
@@ -18,26 +18,19 @@ export default function Projects() {
 
   useEffect(() => {
     if (projects.length > 0) {
-      console.log(selectedTags.length);
-
       if (selectedTags.length > 0) {
         const temp: any = [];
-        projects.forEach((project: any) => {
-          project.tags.forEach((tag: any) => {
-            selectedTags.forEach((selectedTag: any) => {
-              if (tag.sys.id === selectedTag.tagId) {
-                // check if project is already in temp 
-                let alreadyIn = false;
-                temp.forEach((el: any) => {
-                  if (el.title === project.title) {
-                    alreadyIn = true;
-                  }
-                });
-                if (!alreadyIn) temp.push(project);
-              }
-            });
+
+        projects.forEach((el: any) => {
+          selectedTags.forEach((el2: any) => {
+            el.tags.filter((el3: any) => el3.sys.id === el2.tagId).length > 0 &&
+              temp.filter((el4: any) => {
+                return el4 == el;
+              }).length < 1 &&
+              temp.push(el);
           });
         });
+
         setFilteredProjects(temp);
       } else {
         setFilteredProjects(projects);
@@ -68,8 +61,6 @@ export default function Projects() {
       },
     })
       .then((response) => {
-        console.log('tags', response.data);
-
         setTags(response.data);
       })
       .catch((error) => {
@@ -78,7 +69,7 @@ export default function Projects() {
   }
 
   useEffect(() => {
-    console.log('selectedTags', selectedTags);
+    // console.log('selectedTags', selectedTags);
   }, [selectedTags]);
 
   function handleTagSelect(tag: any) {
