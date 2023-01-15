@@ -115,8 +115,8 @@ export default function Projects() {
             />
           ))}
         {filteredProjects.length === 0 &&
-          [1, 2, 3, 4, 5].map(() => (
-            <div className={styles.projectCardSkeleton}>
+          [1, 2, 3, 4, 5].map((key, index) => (
+            <div key={index} className={styles.projectCardSkeleton}>
               <div className={styles.cardImage} />
               <div className={styles.cardDiv}>
                 <div className={styles.cardTitle}></div>

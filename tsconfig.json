@@ -15,6 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx", "components/hero/Hero.tsx", "next.config.js", "next-i18next.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/index.tsx",
+    "components/hero/Hero.tsx",
+    "next.config.js",
+    "next-i18next.config.js"
+  ],
   "exclude": ["node_modules"]
 }

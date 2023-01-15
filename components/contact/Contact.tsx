@@ -5,7 +5,6 @@ import axios from 'axios';
 import {
   isValidMail,
   isAlphabet,
-  isAlphaNumeric,
   isAlphaNumericPunctuation,
 } from '@teleturbis/js-validator';
 
