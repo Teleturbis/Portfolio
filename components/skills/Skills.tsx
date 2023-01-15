@@ -122,10 +122,10 @@ export default function About() {
               className={styles.softskillsOutterbar}
             >
               <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
+                initial={{ width: 0 }}
+                animate={{ width: `${x}%` }}
                 transition={{
-                  delay: 0.08 * index,
+                  delay: 0.2 * (index / 1.25),
                   duration: 0,
                   type: 'spring',
                   damping: 12,

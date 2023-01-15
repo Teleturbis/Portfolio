@@ -55,12 +55,20 @@
       background-color: rgb(87, 87, 87);
     }
   }
+
+  @media (max-width: 768px) {
+    justify-content: space-evenly;
+  }
 }
 
 .projectCardsDiv {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .projectCard {

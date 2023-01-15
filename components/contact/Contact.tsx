@@ -2,24 +2,30 @@ import styles from './Contact.module.scss';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import {
+  isValidMail,
+  isAlphabet,
+  isAlphaNumeric,
+  isAlphaNumericPunctuation,
+} from '@teleturbis/js-validator';
 
 import Input from '../ui/input/Input';
 
 export default function About() {
   const { t } = useTranslation();
   const [focus, setFocus] = useState<string>('');
-  const [firstname, setFirstname] = useState<string | undefined>('');
-  const [lastname, setLastname] = useState<string | undefined>('');
-  const [email, setEmail] = useState<string | undefined>('');
-  const [topic, setTopic] = useState<string | undefined>('');
-  const [phone, setPhone] = useState<string | undefined>('');
-  const [organization, setOrganization] = useState<string | undefined>('');
-  const [message, setMessage] = useState<string | undefined>('');
+  const [firstname, setFirstname] = useState<string>('');
+  const [lastname, setLastname] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [topic, setTopic] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [organization, setOrganization] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
   const [buttonText, setButtonText] = useState<any>(
     t('contact:buttonText.send')
   );
   const [sendStatus, setSendStatus] = useState<string>('');
-  const [isSendValid, setIsSendValid] = useState<boolean>(true);
+  const [isSendValid, setIsSendValid] = useState<boolean>(false);
 
   interface InputEvent {
     element: string;
@@ -42,7 +48,7 @@ export default function About() {
     setFocus(element === '' ? '' : element);
   }
 
-  function changeValue(element: string, value: string | undefined) {
+  function changeValue(element: string, value: any) {
     switch (element) {
       case 'firstname':
         setFirstname(value);
@@ -74,6 +80,14 @@ export default function About() {
 
       default:
         break;
+    }
+  }
+
+  function checkPhone() {
+    if (phone) {
+      return /^[0-9/\s\-]+$/.test(phone);
+    } else {
+      return true;
     }
   }
 
@@ -112,6 +126,7 @@ export default function About() {
       setOrganization('');
       setTopic('');
       setMessage('');
+      setPhone('');
     } else {
       setButtonText(t('contact:buttonText.error'));
     }
@@ -139,29 +154,31 @@ export default function About() {
 
   useEffect(() => {
     if (firstname && lastname && email && topic && organization && message) {
-      setIsSendValid(false);
+      if (
+        isValidMail(email).isValid &&
+        isAlphabet(firstname, { space: true }) &&
+        isAlphabet(lastname, { space: true }) &&
+        isAlphaNumericPunctuation(organization, { space: true }) &&
+        isAlphaNumericPunctuation(topic, { space: true }) &&
+        checkPhone()
+      ) {
+        setIsSendValid(true);
+        return;
+      }
     }
 
-    if (
-      !firstname ||
-      !lastname ||
-      !email ||
-      !topic ||
-      !organization ||
-      !message
-    ) {
-      setIsSendValid(true);
-    }
-  }, [firstname, lastname, email, topic, organization, message]);
+    setIsSendValid(false);
+  }, [firstname, lastname, email, topic, organization, message, phone]);
 
   return (
     <main className={`${styles.main}`}>
       <div className={styles.descriptionDiv}>
         <h2>Kontaktiere mich!</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
-          sapiente id. Ratione animi accusamus quam magni excepturi, nisi hic ad
-          in! Alias velit consectetur est repellat dolore optio debitis et.
+          Über eine Nachricht freue ich mich immer! Ich werde mich so schnell
+          wie möglich bei dir melden. Du kannst mich auch gerne über das
+          nebenstehende Kontaktformular kontaktieren. Du erhältst eine
+          Bestätigungsmail, sobald ich deine Nachricht erhalten habe.
         </p>
         <ul>
           <li>
@@ -241,13 +258,13 @@ export default function About() {
             rows={10}
           />
         </div>
-        <p>* Erforderliches Feld</p>
+        <p className={styles.disclaimer}>* Erforderliches Feld</p>
         <button
           onClick={() => sendMail()}
-          className={[styles.button, isSendValid ? styles.disabled : ''].join(
+          className={[styles.button, !isSendValid ? styles.disabled : ''].join(
             ' '
           )}
-          disabled={isSendValid}
+          disabled={!isSendValid}
         >
           {buttonText}
         </button>
