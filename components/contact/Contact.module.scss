@@ -13,7 +13,7 @@
 
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     height: 100%;
     padding: 2rem;
@@ -51,6 +51,27 @@
 
       display: flex;
       justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    ul {
+      li {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -68,6 +89,10 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .textDiv {
@@ -122,6 +147,16 @@
       color: rgb(112, 112, 112);
     }
   }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  margin: -0.5rem 0;
+  padding: 0;
 }
 
 .loadingOutter {
