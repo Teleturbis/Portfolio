@@ -1,3 +1,23 @@
+$background: linear-gradient(
+  90deg,
+  rgb(138, 138, 138) 0%,
+  rgb(138, 138, 138) 25%,
+  rgb(233, 233, 233) 50%,
+  rgb(138, 138, 138) 75%,
+  rgb(138, 138, 138) 100%
+);
+$size: 500%;
+$animation: skeletonAnimation 2s infinite;
+
+@keyframes skeletonAnimation {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
 .main {
   border-radius: 0.4rem;
   background-color: rgb(26, 26, 26);
@@ -126,4 +146,85 @@
       color: #fff;
     }
   }
+}
+
+.projectCardSkeleton {
+  width: 15rem;
+  height: 20rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(66, 66, 66);
+  transition: 500ms;
+  display: inline-block;
+
+  .cardImage {
+    width: 100%;
+    height: 125px;
+    border-radius: 0.2rem;
+
+    background: $background;
+    background-size: $size;
+    background-position: left;
+
+    animation: $animation;
+  }
+
+  .cardDiv {
+    height: 11.5rem;
+    position: relative;
+  }
+
+  .cardTitle {
+    margin-top: 0.5rem;
+    height: 1.5rem;
+    border-radius: 0.2rem;
+
+    background: $background;
+    background-size: $size;
+    background-position: left;
+    animation: $animation;
+  }
+
+  .cardDescription {
+    margin-top: 1rem;
+    border-radius: 0.2rem;
+    height: 1.5rem;
+
+    background: $background;
+    background-size: $size;
+    background-position: left;
+    animation: $animation;
+  }
+
+  .cardTag {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.2rem;
+
+    height: 1.4rem;
+    width: 100%;
+
+    background: $background;
+    background-size: $size;
+    background-position: left;
+    animation: $animation;
+  }
+}
+
+.tagSkeleton {
+  font-size: 1rem;
+  color: rgb(209, 209, 209);
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  height: 1.2rem;
+
+  background: $background;
+  background-size: $size;
+  background-position: left;
+  animation: $animation;
 }

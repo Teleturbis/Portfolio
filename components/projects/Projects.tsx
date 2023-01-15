@@ -68,10 +68,6 @@ export default function Projects() {
       });
   }
 
-  useEffect(() => {
-    // console.log('selectedTags', selectedTags);
-  }, [selectedTags]);
-
   function handleTagSelect(tag: any) {
     if (!selectedTags.includes(tag)) {
       const temp = [...selectedTags, tag];
@@ -100,6 +96,7 @@ export default function Projects() {
               {tag.name}
             </button>
           ))}
+        {tags.length === 0 && <div className={styles.tagSkeleton}></div>}
       </div>
       <div className={styles.projectCardsDiv}>
         {filteredProjects.length > 0 &&
@@ -116,6 +113,17 @@ export default function Projects() {
               tags={el.tags}
               allTags={tags}
             />
+          ))}
+        {filteredProjects.length === 0 &&
+          [1, 2, 3, 4, 5].map(() => (
+            <div className={styles.projectCardSkeleton}>
+              <div className={styles.cardImage} />
+              <div className={styles.cardDiv}>
+                <div className={styles.cardTitle}></div>
+                <div className={styles.cardDescription}></div>
+                <div className={styles.cardTag}></div>
+              </div>
+            </div>
           ))}
       </div>
     </main>
