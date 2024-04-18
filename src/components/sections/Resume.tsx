@@ -19,7 +19,7 @@ export default function Resume({ lang }: { lang: ResumeType }) {
           </h2>
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 gap-x-12 px-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-12 px-8'>
           <ul role='list' className='flex flex-col gap-y-8'>
             {lang.work.map((position, index: number) => (
               <li
