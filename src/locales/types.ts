@@ -50,6 +50,6 @@ export type ProjectsType = {
     title: string;
     type: string;
     description: string[];
-    images: string[];
+    images?: string[];
   }[];
 };
