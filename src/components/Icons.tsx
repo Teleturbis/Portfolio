@@ -3,16 +3,7 @@
 import React, { useState } from 'react';
 
 type Props = {
-  variant:
-    | 'GitHub'
-    | 'Discord'
-    | 'Instagram'
-    | 'LinkedIn'
-    | 'Npm'
-    | 'Steam'
-    | 'Threads'
-    | 'WhatsApp'
-    | 'Xing';
+  variant: string;
   color: string;
   hoverColor?: string;
 };
