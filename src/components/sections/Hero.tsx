@@ -2,7 +2,9 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import ScrollDownButtonHero from '@/components/buttons/ScrollDownButtonHero';
 
-export default function Hero({ lang }) {
+import type { HeroType } from '@/locales/types';
+
+export default function Hero({ lang }: { lang: HeroType }) {
   return (
     <>
       <div className='relative isolate overflow-hidden bg-white h-hero flex sm:items-center'>

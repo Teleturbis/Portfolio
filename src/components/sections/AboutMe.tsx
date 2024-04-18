@@ -2,12 +2,14 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import React from 'react';
 
+import type { AboutMeType } from '@/locales/types';
+
 const stats = [
   { label: 'code', value: '2010' },
   { label: 'energy', value: '704' },
 ];
 
-export default function AboutMe({ lang }: { lang: { [key: string]: any } }) {
+export default function AboutMe({ lang }: { lang: AboutMeType }) {
   return (
     <div className='bg-brand-mint/25' id='AboutMe'>
       <div className='py-24 sm:pb-32 md:pt-56'>

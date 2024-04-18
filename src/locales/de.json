@@ -48,47 +48,59 @@
       {
         "company": "Urlaubsguru GmbH",
         "position": "Frontend Developer",
-        "date": "2022 - heute",
+        "date": "Juni 2022 - heute",
         "icon": "dev",
         "description": [
-          "🚀 Entwicklung von innovativen und benutzerfreundlichen Webanwendungen mit ReactJS und TypeScript",
-          "🛠️ Implementierung von AB-Tests mit Kameleoon, um datengesteuerte Entscheidungen zu treffen und benutzerzentrierte Lösungen zu entwickeln",
-          "🌟 Fokus auf 'Clean Code' und herausragende Responsivität"
+          "🛠️ Wartung und Optimierung der Projekte in Vue2/Nuxt2",
+          "🧩 Entwicklung und Anpassung von Vue2 Komponenten",
+          "🖥️ Entwicklung eines Wrapper-Systems für anpassbare WebComponents",
+          "🔄 Transformation von Vue-Komponenten in WebComponents für Partnerintegration",
+          "🚀 Aufbau einer neuen Component Library und WebApp im Monorepo mit modernen Technologien wie Next.js, React, Tailwind CSS, RadixUI, i18n, React Testing Library und Apollo (GraphQL)",
+          "📊 Implementierung und Betreuung von A/B-Testing und Tracking mit Kameleoon und Google Analytics",
+          "👥 Einarbeitung neuer Mitarbeiter und Durchführung von Code Reviews"
         ]
       },
       {
-        "company": "Kirchliche Sozialstation",
+        "company": "Kirchliche Sozialstation Walldürn",
         "position": "Examinierter Altenpfleger",
-        "date": "2015 - 2022",
+        "date": "Mai 2015 - Januar 2022",
         "icon": "nurse",
         "description": [
-          "🚀 Pflege und Betreuung von älteren Menschen in ihrer häuslichen Umgebung",
-          "🛠️ Organisation und Durchführung von Pflegevisiten und Beratungsgesprächen",
-          "🌟 Verantwortung für die Dokumentation und Pflegeplanung"
+          "👴👵 Leitung der eigenen Tour mit 17 - 20 Patienten",
+          "🏡 Verantwortung für die Pflege und Betreuung älterer Menschen in ihrer häuslichen Umgebung",
+          "📝 Organisation und Durchführung von Pflegevisiten und Beratungsgesprächen",
+          "📊 Verantwortung für die Dokumentation und Pflegeplanung"
+        ]
+      },
+      {
+        "company": "Anima GbR Waiblingen",
+        "position": "Examinierter Altenpfleger",
+        "date": "September 2014 - April 2015",
+        "icon": "nurse",
+        "description": [
+          "🛏️ 24h Heimbeatmung und Intensivpflege komatöser Patienten"
         ]
       }
     ],
     "education": [
       {
-        "company": "WBS Coding School",
-        "position": "Web Developer",
+        "company": "WBS Coding School Berlin",
+        "position": "Web Developer (Fullstack Web- & Appentwickler)",
         "date": "2021 - 2022",
         "icon": "graduation",
         "description": [
-          "🚀 Intensives 24-wöchiges Bootcamp mit Fokus auf JavaScript, ReactJS, NodeJS und ExpressJS",
-          "🛠️ Entwicklung von Webanwendungen in agilen Teams",
-          "🌟 Abschlussprojekt: Entwicklung einer Webanwendung zur Verwaltung von Rezepten mit ReactJS und ExpressJS"
+          "🚀 Intensives, projektbasiertes und praxisorientiertes Programmiertraining in einem kollaborativen Umfeld",
+          "💻 Fokus auf JavaScript, ReactJS, HTML, SQL, NodeJS, ExpressJS, MongoDB, SCRUM, PostgreSQL"
         ]
       },
       {
-        "company": "Johannes-Diakonie Mosbach",
+        "company": "Helmuth-Galda Haus",
         "position": "Examinierter Altenpfleger",
-        "date": "2012 - 2015",
+        "date": "2012 - 2014",
         "icon": "graduation",
         "description": [
-          "🚀 Ausbildung zum Examinierter Altenpfleger",
-          "🛠️ Praktische Einsätze in verschiedenen Pflegeeinrichtungen",
-          "🌟 Abschlussprüfung: Entwicklung eines Pflegekonzepts für einen Demenzkranken"
+          "🎓 Ausbildung zum Examinierter Altenpfleger mit praktischen Einsätzen in verschiedenen Pflegeeinrichtungen",
+          "📖 Entwicklung eines Pflegekonzepts für einen Demenzkranken als Abschlussprüfung"
         ]
       }
     ]

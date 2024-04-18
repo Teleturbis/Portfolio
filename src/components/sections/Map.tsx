@@ -3,6 +3,8 @@
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 import clsx from 'clsx';
 
+import type { MapType } from '@/locales/types';
+
 const containerStyle = {
   width: '100%',
   height: '100%',
@@ -19,7 +21,7 @@ type MarkerData = {
   content: string;
 };
 
-export default function SocialsSection({ lang }) {
+export default function Map({ lang }: { lang: MapType }) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: `${process.env.NEXT_PUBLIC_MAPS_API_KEY}`,

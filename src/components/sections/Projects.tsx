@@ -5,7 +5,9 @@ import { CommandLineIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Resume({ lang }) {
+import type { ProjectsType } from '@/locales/types';
+
+export default function Projects({ lang }: { lang: ProjectsType }) {
   return (
     <div className='py-24 sm:py-32 bg-brand-mint/25' id='Projects'>
       <div className='max-w-7xl mx-auto'>

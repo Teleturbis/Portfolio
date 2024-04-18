@@ -2,7 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
-export default function SocialsSection({ lang }) {
+import type { SocialsType } from '@/locales/types';
+
+export default function SocialsSection({ lang }: { lang: SocialsType }) {
   return (
     <div className='py-24 sm:py-32 bg-brand-dark' id='Socials'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
