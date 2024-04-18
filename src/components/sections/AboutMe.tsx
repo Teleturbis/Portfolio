@@ -4,10 +4,18 @@ import React from 'react';
 
 import type { AboutMeType } from '@/locales/types';
 
-const stats = [
+const stats: {
+  label: 'code' | 'energy';
+  value: string;
+}[] = [
   { label: 'code', value: '2010' },
   { label: 'energy', value: '704' },
 ];
+
+type StatsType = {
+  label: string;
+  value: string;
+};
 
 export default function AboutMe({ lang }: { lang: AboutMeType }) {
   return (
@@ -35,16 +43,24 @@ export default function AboutMe({ lang }: { lang: AboutMeType }) {
                 </div>
               </div>
               <dl className='mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4'>
-                {stats.map((stat, statIdx) => (
-                  <div key={statIdx} className='flex flex-col items-center'>
-                    <dt className='text-sm font-semibold leading-6 text-gray-600'>
-                      {lang.stats[stat.label]}
-                    </dt>
-                    <dd className='mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900'>
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
+                {stats.map(
+                  (
+                    stat: {
+                      label: keyof typeof lang.stats;
+                      value: string;
+                    },
+                    statIdx: number
+                  ) => (
+                    <div key={statIdx} className='flex flex-col items-center'>
+                      <dt className='text-sm font-semibold leading-6 text-gray-600'>
+                        {lang.stats[stat.label]}
+                      </dt>
+                      <dd className='mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900'>
+                        {stat.value}
+                      </dd>
+                    </div>
+                  )
+                )}
               </dl>
             </div>
             <div className='lg:pr-4'>
