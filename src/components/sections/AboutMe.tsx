@@ -12,11 +12,6 @@ const stats: {
   { label: 'energy', value: '704' },
 ];
 
-type StatsType = {
-  label: string;
-  value: string;
-};
-
 export default function AboutMe({ lang }: { lang: AboutMeType }) {
   return (
     <div className='bg-brand-mint/25' id='AboutMe'>
