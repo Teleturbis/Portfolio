@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "contact-cta": "Get in touch",
+    "title": ["Kevin Poppe", "Web-Developer"]
+  },
+  "about-me": {
+    "title": "Über mich",
+    "description": [
+      "🚀 Leidenschaftlicher Webentwickler mit einem einzigartigen Hintergrund in der Altenpflege, der meine Soft Skills geprägt hat.",
+      "💼 Aktuell fokussiere ich mich auf die Entwicklung mit ReactJS und TypeScript, wobei ich ein besonderes Augenmerk auf 'Clean Code' und eine herausragende Responsivität lege. Meine langjährige Erfahrung als Hobbyprogrammierer hat mir ein tiefes Verständnis für Best Practices und Dynamik in der Webentwicklung vermittelt.",
+      "🛠️ Expertise: ReactJS, NextJS, VueJS, NuxtJS, ExpressJS",
+      "💡 Ich verfüge auch über Erfahrung im Bereich AB-Testing mit Kameleoon, was mir geholfen hat, datengesteuerte Entscheidungen zu treffen und benutzerzentrierte Lösungen zu entwickeln.",
+      "🌟 Mein Ziel ist es, innovative, benutzerfreundliche und hochperformante Webanwendungen zu entwickeln, die echten Mehrwert bieten und das Nutzererlebnis verbessern."
+    ],
+    "stats": {
+      "code": "Erste Zeile Code",
+      "energy": "Dosen Energy"
+    }
+  },
+  "socials": {
+    "title": "Kontakt",
+    "icons": [
+      {
+        "icon": "/socialicons/github.svg",
+        "alt": "GitHub",
+        "url": "https://example.com"
+      },
+      {
+        "icon": "/socialicons/linkedin.svg",
+        "alt": "LinkedIn",
+        "url": "https://example.com"
+      },
+      {
+        "icon": "/socialicons/instagram.svg",
+        "alt": "Instagram",
+        "url": "https://example.com"
+      },
+      {
+        "icon": "/socialicons/threads.svg",
+        "alt": "Threads",
+        "url": "https://example.com"
+      }
+    ]
+  },
+  "resume": {
+    "title": "Lebenslauf",
+    "work": [
+      {
+        "company": "Urlaubsguru GmbH",
+        "position": "Frontend Developer",
+        "date": "2022 - heute",
+        "icon": "dev",
+        "description": [
+          "🚀 Entwicklung von innovativen und benutzerfreundlichen Webanwendungen mit ReactJS und TypeScript",
+          "🛠️ Implementierung von AB-Tests mit Kameleoon, um datengesteuerte Entscheidungen zu treffen und benutzerzentrierte Lösungen zu entwickeln",
+          "🌟 Fokus auf 'Clean Code' und herausragende Responsivität"
+        ]
+      },
+      {
+        "company": "Kirchliche Sozialstation",
+        "position": "Examinierter Altenpfleger",
+        "date": "2015 - 2022",
+        "icon": "nurse",
+        "description": [
+          "🚀 Pflege und Betreuung von älteren Menschen in ihrer häuslichen Umgebung",
+          "🛠️ Organisation und Durchführung von Pflegevisiten und Beratungsgesprächen",
+          "🌟 Verantwortung für die Dokumentation und Pflegeplanung"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "company": "WBS Coding School",
+        "position": "Web Developer",
+        "date": "2021 - 2022",
+        "icon": "graduation",
+        "description": [
+          "🚀 Intensives 24-wöchiges Bootcamp mit Fokus auf JavaScript, ReactJS, NodeJS und ExpressJS",
+          "🛠️ Entwicklung von Webanwendungen in agilen Teams",
+          "🌟 Abschlussprojekt: Entwicklung einer Webanwendung zur Verwaltung von Rezepten mit ReactJS und ExpressJS"
+        ]
+      },
+      {
+        "company": "Johannes-Diakonie Mosbach",
+        "position": "Examinierter Altenpfleger",
+        "date": "2012 - 2015",
+        "icon": "graduation",
+        "description": [
+          "🚀 Ausbildung zum Examinierter Altenpfleger",
+          "🛠️ Praktische Einsätze in verschiedenen Pflegeeinrichtungen",
+          "🌟 Abschlussprüfung: Entwicklung eines Pflegekonzepts für einen Demenzkranken"
+        ]
+      }
+    ]
+  },
+  "map": {
+    "title": "Mein Standort",
+    "subTitle": "Collenberg, Bayern, DE - oder digital überall"
+  },
+  "projects": {
+    "title": "Projekte",
+    "projects": [
+      {
+        "title": "Versicherungen Stang - Webanwendung",
+        "type": "NextJS, TypeScript, TailwindCSS",
+        "description": [
+          "🚀 Entwicklung der Web-Oberfläche für 'Versicherungen-Stang' mit Next.js und TypeScript, unter Verwendung von Tailwind CSS für ein responsives Design, das sich auf verschiedenen Geräten optimal anpasst",
+          "🛠️ Fokus auf Benutzerinteraktionen durch Integration von Google Kalender und interaktiven Kontaktformularen, die eine nahtlose Benutzererfahrung bieten",
+          "🌟 Streben nach Clean Code und herausragender Performance, um schnelle Ladezeiten und eine reibungslose Navigation zu gewährleisten"
+        ],
+        "images": [
+          "/stang/home.png",
+          "/stang/glossar.png",
+          "/stang/calendar.png",
+          "/stang/contact.png"
+        ]
+      },
+      {
+        "title": "Versicherungen Stang - Backend",
+        "type": "ExpressJS, MongoDB, Mongoose, Google Cloud Platform, Nodemailer, ChatGPT, JWT",
+        "description": [
+          "🚀 Backend-Entwicklung für 'Versicherungen-Stang' mit Express.js, um eine leistungsstarke und effiziente Serverseite zu gewährleisten, die robuste API-Endpunkte für Datenabfragen und -manipulation bietet",
+          "🛠️ Integration moderner Datenverwaltung durch Einsatz von MongoDB mit Mongoose für eine skalierbare und flexible Datenhaltung, die eine nahtlose Interaktion mit dem Frontend ermöglicht",
+          "🌟 Fokus auf Sicherheit und Zuverlässigkeit, einschließlich der Implementierung von Best Practices für das Backend-Management und fortgeschrittene Fehlerbehandlung, um die Stabilität der Plattform zu sichern"
+        ]
+      },
+      {
+        "title": "Versicherungen Stang - CMS",
+        "type": "NextJS, TypeScript, TailwindCSS, Authentifizierung",
+        "description": [
+          "🚀 Entwicklung eines maßgeschneiderten CMS für 'Versicherungen-Stang' mit Next.js und TypeScript, das eine nahtlose und benutzerfreundliche Content-Verwaltung ermöglicht",
+          "🛠️ Erweiterung der Content-Erstellung durch die Integration von ChatGPT 3.5, die Jürgen Stang unterstützt, optimierte und zielgerichtete Blogartikel in Markdown zu verfassen",
+          "🌟 Fokus auf Effizienz und Anpassungsfähigkeit, wobei das CMS speziell auf die Bedürfnisse eines Versicherungsmaklers zugeschnitten ist, um die Pflege von Fachbegriffen und die Content-Aktualisierung zu vereinfachen"
+        ],
+        "images": [
+          "/stang/cms/uebersicht.png",
+          "/stang/cms/blog.png",
+          "/stang/cms/images.png",
+          "/stang/cms/person.png"
+        ]
+      },
+      {
+        "title": "Rechnungen einfach erstellen & versenden",
+        "type": "ReactJS, NextJS, TailwindCSS, ExpressJS, Nodemailer, JWT",
+        "description": [
+          "🚀 Entwicklung eines Rechnungserstellungssystems für einfaches Management von Geschäftstransaktionen - Realisiert als Next.js-Projekt mit Tailwind CSS, um Benutzerfreundlichkeit und ansprechendes Design zu gewährleisten",
+          "🛠️ Backend-Funktionalität mit Express.js und JWT - Sicherstellt eine zuverlässige Datenverarbeitung und Authentifizierung. Automatisierte Erstellung und Versand von PDF-Rechnungen via Nodemailer, mit optionalen Zahlungszielen und automatischer MwSt.-Berechnung",
+          "🌟 Dynamische und skalierbare Lösung - Fortlaufende Erweiterungen und Optimierungen unterstützen das Wachstum und die Anpassungsfähigkeit des Systems, um den sich ändernden Anforderungen des Geschäftsalltags gerecht zu werden"
+        ],
+        "images": ["/rechnungen-erstellen/loggedin.png"]
+      }
+    ]
+  }
+}
