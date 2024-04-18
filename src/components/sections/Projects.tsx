@@ -49,7 +49,7 @@ export default function Projects({ lang }: { lang: ProjectsType }) {
                   </div>
                 </div>
 
-                {project.images?.length > 0 && (
+                {project.images && project.images.length > 0 && (
                   <div className='flex gap-2 flex-wrap bg-brand-mint p-2 rounded-md justify-between'>
                     {project.images.map((image: string, index: number) => (
                       <Link key={index} href={image} target='_blank'>
