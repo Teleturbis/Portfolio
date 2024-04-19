@@ -3,7 +3,7 @@ import React from 'react';
 const Impressum = () => {
   return (
     <div className='px-4 py-6 sm:px-6 lg:px-8 bg-brand-gray text-brand-text'>
-      <h1 className='text-2xl font-bold'>Impressum</h1>
+      <h2 className='text-2xl font-bold'>Impressum</h2>
       <p className='mt-2'>Angaben gemäß § 5 TMG</p>
       <p className='mt-1'>
         Kevin Poppe <br />

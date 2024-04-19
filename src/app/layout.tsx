@@ -15,16 +15,13 @@ export const metadata: Metadata = {
   description:
     'Kevin Poppe | Leidenschaftlicher Webentwickler mit Fokus auf NextJS und TypeScript. Ich erschaffe sauberen, reaktionsstarken Code und entwickle hochperformante Webanwendungen.',
   keywords: [
-    'Webentwicklung',
+    'Webentwickler',
     'NextJS',
     'TypeScript',
-    'Clean Code',
     'responsive Design',
     'Webanwendungen',
-    'Programmierer',
     'Fullstack Developer',
     'Frontend Developer',
-    'Website erstellen',
   ],
   authors: [{ name: 'Kevin Poppe' }],
   robots: 'index, follow',
