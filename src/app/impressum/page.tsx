@@ -1,4 +1,47 @@
+import type { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Kevin Poppe | Webentwickler',
+  description:
+    'Kevin Poppe | Leidenschaftlicher Webentwickler mit Fokus auf NextJS und TypeScript. Ich erschaffe sauberen, reaktionsstarken Code und entwickle hochperformante Webanwendungen.',
+  keywords: [
+    'Fullstack Entwickler',
+    'Frontend Entwickler',
+    'Webentwickler',
+    'ReactJS',
+    'TypeScript',
+    'Clean Code',
+    'Responsive Design',
+    'Webanwendungen',
+    'Best Practices in der Webentwicklung',
+    'NextJS',
+    'VueJS',
+    'NuxtJS',
+    'ExpressJS',
+    'Benutzerzentrierte Lösungen',
+  ],
+  authors: [{ name: 'Kevin Poppe' }],
+  robots: 'noindex, follow',
+
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    url: 'https://kevinpoppe.com',
+    siteName: 'Kevin Poppe',
+    title: 'KP | Impressum',
+    description:
+      'Kevin Poppe | Leidenschaftlicher Webentwickler mit Fokus auf NextJS und TypeScript. Ich erschaffe sauberen, reaktionsstarken Code und entwickle hochperformante Webanwendungen.',
+    images: [
+      {
+        url: 'https://kevinpoppe.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Kevin Poppe | Webentwickler',
+      },
+    ],
+  },
+};
 
 const Impressum = () => {
   return (
