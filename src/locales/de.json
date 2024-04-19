@@ -7,11 +7,11 @@
   "about-me": {
     "title": "Über mich",
     "description": [
-      "🚀 Leidenschaftlicher Webentwickler mit einem einzigartigen Hintergrund in der Altenpflege, der meine Soft Skills geprägt hat.",
-      "💼 Aktuell fokussiere ich mich auf die Entwicklung mit ReactJS und TypeScript, wobei ich ein besonderes Augenmerk auf 'Clean Code' und eine herausragende Responsivität lege. Meine langjährige Erfahrung als Hobbyprogrammierer hat mir ein tiefes Verständnis für Best Practices und Dynamik in der Webentwicklung vermittelt.",
-      "🛠️ Expertise: ReactJS, NextJS, VueJS, NuxtJS, ExpressJS",
-      "💡 Ich verfüge auch über Erfahrung im Bereich AB-Testing mit Kameleoon, was mir geholfen hat, datengesteuerte Entscheidungen zu treffen und benutzerzentrierte Lösungen zu entwickeln.",
-      "🌟 Mein Ziel ist es, innovative, benutzerfreundliche und hochperformante Webanwendungen zu entwickeln, die echten Mehrwert bieten und das Nutzererlebnis verbessern."
+      "🚀 Ich bin ein leidenschaftlicher Webentwickler mit einem einzigartigen Hintergrund in der Altenpflege, der meine Soft Skills geprägt hat. Durch meine Erfahrung in verschiedenen Lebensbereichen bringe ich Empathie und Nutzerzentrierung in jedes Projekt ein.",
+      "💻 Aktuell fokussiere ich mich auf die Entwicklung mit ReactJS und TypeScript, wobei ich ein besonderes Augenmerk auf Clean Code und herausragende Responsive Design-Fähigkeiten lege. Meine langjährige Erfahrung als Hobbyprogrammierer hat mir ein tiefes Verständnis für Best Practices in der Webentwicklung vermittelt.",
+      "🛠️ Ich habe fundierte Kenntnisse in ReactJS, NextJS, VueJS, NuxtJS und ExpressJS. Diese Technologien ermöglichen es mir, effiziente und skalierbare Lösungen zu entwickeln.",
+      "📊 Meine Erfahrung im Bereich AB-Testing mit Kameleoon hat es mir ermöglicht, datengesteuerte Entscheidungen zu treffen, die benutzerzentrierte Lösungen fördern und die User Experience verbessern.",
+      "🌟 Mein Ziel ist es, innovative, benutzerfreundliche und hochperformante Webanwendungen zu entwickeln, die einen echten Mehrwert bieten und das Nutzererlebnis auf ein neues Level heben."
     ],
     "stats": {
       "code": "Erste Zeile Code",
