@@ -24,22 +24,32 @@
       {
         "icon": "/socialicons/github.svg",
         "alt": "GitHub",
-        "url": "https://example.com"
+        "url": "https://github.com/Teleturbis"
       },
       {
         "icon": "/socialicons/linkedin.svg",
         "alt": "LinkedIn",
-        "url": "https://example.com"
+        "url": "https://www.linkedin.com/in/poppe-kevin/"
       },
       {
         "icon": "/socialicons/instagram.svg",
         "alt": "Instagram",
-        "url": "https://example.com"
+        "url": "https://www.instagram.com/teleturbis"
       },
       {
         "icon": "/socialicons/threads.svg",
         "alt": "Threads",
-        "url": "https://example.com"
+        "url": "https://www.threads.net/@teleturbis"
+      },
+      {
+        "icon": "/socialicons/whatsapp.svg",
+        "alt": "WhatsApp",
+        "url": "https://wa.me/16091118502"
+      },
+      {
+        "icon": "/socialicons/email.svg",
+        "alt": "Email",
+        "url": "kevin.poppe93@gmail.com"
       }
     ]
   },

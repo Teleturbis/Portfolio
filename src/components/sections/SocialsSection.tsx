@@ -8,12 +8,12 @@ export default function SocialsSection({ lang }: { lang: SocialsType }) {
   return (
     <div className='py-24 sm:py-32 bg-brand-dark' id='Socials'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div className='-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-4'>
+        <div className='-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-6'>
           {lang.icons.map((item, index: number) => (
             <Link
               className='bg-white/75 p-8 sm:p-10 hover:bg-white/85 flex flex-col gap-2 items-center justify-center transition-opacity duration-300 ease-in-out'
               key={index}
-              href={item.url}
+              href={item.alt === 'Email' ? `mailto:${item.url}` : item.url}
               target='_blank'
             >
               <Image

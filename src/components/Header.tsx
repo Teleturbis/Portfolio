@@ -51,7 +51,7 @@ export default function Header() {
           </div>
         </div>
 
-        <a href='#' className='-m-1.5 p-1.5'>
+        <a href='/' className='-m-1.5 p-1.5'>
           <span className='sr-only'>Your Company</span>
           <Image
             height={70}
@@ -97,7 +97,7 @@ export default function Header() {
                 <XMarkIcon className='h-6 w-6' aria-hidden='true' />
               </button>
             </div>
-            <a href='#' className='-m-1.5 p-1.5'>
+            <a href='/' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Kevin Poppe</span>
               <Image
                 height={70}
