@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'Website erstellen',
   ],
   authors: [{ name: 'Kevin Poppe' }],
+  robots: 'index, follow',
 
   // Open Graph
   openGraph: {
