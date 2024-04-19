@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     'VueJS',
     'NuxtJS',
     'ExpressJS',
-    'AB-Testing',
     'Benutzerzentrierte Lösungen',
   ],
   authors: [{ name: 'Kevin Poppe' }],
