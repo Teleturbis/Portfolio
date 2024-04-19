@@ -50,15 +50,15 @@ export default function Projects({ lang }: { lang: ProjectsType }) {
                 </div>
 
                 {project.images && project.images.length > 0 && (
-                  <div className='flex gap-2 flex-wrap bg-brand-mint p-2 rounded-md justify-between'>
+                  <div className='grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2 bg-brand-mint p-2 rounded-md justify-between'>
                     {project.images.map((image: string, index: number) => (
                       <Link key={index} href={image} target='_blank'>
                         <Image
                           src={image}
                           alt={image}
-                          width={120}
-                          height={68}
-                          className='opacity-75 hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer rounded-sm'
+                          width={250}
+                          height={125}
+                          className='opacity-75 hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer rounded-sm w-full h-auto'
                         />
                       </Link>
                     ))}

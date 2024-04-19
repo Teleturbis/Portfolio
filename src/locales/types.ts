@@ -1,6 +1,7 @@
 export type HeroType = {
   'contact-cta': string;
   title: string[];
+  slogan: string;
 };
 
 export type AboutMeType = {
