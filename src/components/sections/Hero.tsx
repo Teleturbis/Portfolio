@@ -56,27 +56,19 @@ export default function Hero({ lang }: { lang: HeroType }) {
                 ))}
               </h1>
             </div>
-            <p className='mt-6 text-lg leading-8 text-gray-600 xl:w-auto'>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+            <p className='mt-6 text-lg leading-8 font-semibold text-gray-600 xl:w-auto'>
+              {lang.slogan}
             </p>
             <div className='mt-10 flex items-center gap-x-6'>
               <a
-                href='#'
-                className='rounded-md bg-brand-light px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-light-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                href='#Socials'
+                className='rounded-md hidden lg:block bg-brand-light px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-light-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
               >
                 {lang['contact-cta']}
               </a>
-              <a
-                href='#'
-                className='text-sm font-semibold leading-6 text-brand-text'
-              >
-                Learn more <span aria-hidden='true'>→</span>
-              </a>
             </div>
           </div>
-          <div className='mx-auto mt-16 flex w-1/2 max-w-2xl sm:mt-24 sm:ml-10 sm:mr-0 sm:mt-0 sm:max-w-none sm:flex-none xl:ml-32'>
+          <div className='mx-auto mt-16 flex w-1/2 max-w-2xl sm:ml-10 sm:mr-0 sm:mt-0 sm:max-w-none sm:flex-none xl:ml-32'>
             <div className='max-w-3xl flex-none sm:max-w-5xl lg:max-w-none'>
               <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
                 <div className='rounded-md shadow-2xl ring-1 ring-gray-900/10 w-5/6'>
@@ -118,10 +110,8 @@ export default function Hero({ lang }: { lang: HeroType }) {
                 ))}
               </h1>
             </div>
-            <p className='mt-6 xs:text-lg leading-8 text-gray-900 bg-white/50 w-full px-4'>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+            <p className='mt-6 xs:text-lg leading-8 text-gray-900 font-semibold bg-white/50 w-full px-4'>
+              {lang.slogan}
             </p>
           </div>
 
@@ -139,7 +129,7 @@ export default function Hero({ lang }: { lang: HeroType }) {
       </div>
       <ScrollDownButtonHero />
 
-      <div className='w-full bg-white h-24 absolute z-40 bottom-0' />
+      <div className='w-full bg-white h-36 sm:h-24 absolute z-40 -bottom-10' />
     </>
   );
 }

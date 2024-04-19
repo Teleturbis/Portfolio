@@ -1,7 +1,8 @@
 {
   "hero": {
     "contact-cta": "Get in touch",
-    "title": ["Kevin Poppe", "Web-Developer"]
+    "title": ["Kevin Poppe", "Web-Developer"],
+    "slogan": "Programmieren aus Leidenschaft - Für Anwendungen, die mehr bewegen"
   },
   "about-me": {
     "title": "Über mich",

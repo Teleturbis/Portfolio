@@ -26,17 +26,23 @@ export default function Resume({ lang }: { lang: ResumeType }) {
                 key={index}
                 className='rounded-xl border border-gray-200 bg-white p-6 flex flex-col gap-4 h-full'
               >
-                <div className='flex items-center gap-x-4 border-b border-gray-900/5'>
+                <div className='grid grid-cols-12 items-center gap-x-4 border-b border-gray-900/5'>
                   {position.icon === 'dev' ? (
-                    <CommandLineIcon className='h-10 w-10' aria-hidden='true' />
+                    <CommandLineIcon
+                      className='h-10 w-10 col-span-2'
+                      aria-hidden='true'
+                    />
                   ) : (
-                    <HeartIcon className='h-10 w-10' aria-hidden='true' />
+                    <HeartIcon
+                      className='h-10 w-10 col-span-2'
+                      aria-hidden='true'
+                    />
                   )}
-                  <div>
+                  <div className='col-span-10'>
                     <p className='font-semibold leading-6 text-gray-900'>
                       {position.company}
                     </p>
-                    <div className='flex items-center gap-2 text-xs'>
+                    <div className='flex flex-col items-start text-xs'>
                       <p className='font-medium text-gray-900'>
                         {position.position}
                       </p>
@@ -58,19 +64,24 @@ export default function Resume({ lang }: { lang: ResumeType }) {
             ))}
           </ul>
 
+          <span className='h-1 w-full rounded-full bg-brand-light-blue my-4 sm:hidden' />
+
           <ul role='list' className='flex flex-col gap-y-8'>
             {lang.education.map((position, index: number) => (
               <li
                 key={index}
                 className='overflow-hidden rounded-xl border border-gray-200 bg-white p-6 flex flex-col gap-4 h-full'
               >
-                <div className='flex items-center gap-x-4 border-b border-gray-900/5'>
-                  <AcademicCapIcon className='h-10 w-10' aria-hidden='true' />
-                  <div>
+                <div className='grid grid-cols-12 items-center gap-x-4 border-b border-gray-900/5'>
+                  <AcademicCapIcon
+                    className='h-10 w-10 col-span-2'
+                    aria-hidden='true'
+                  />
+                  <div className='col-span-10'>
                     <p className='font-semibold leading-6 text-gray-900'>
                       {position.company}
                     </p>
-                    <div className='flex items-center gap-2 text-xs'>
+                    <div className='flex flex-col items-start text-xs'>
                       <p className='font-medium text-gray-900'>
                         {position.position}
                       </p>

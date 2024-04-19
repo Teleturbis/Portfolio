@@ -85,7 +85,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className='fixed inset-0 z-40' />
-        <Dialog.Panel className='fixed inset-y-0 left-0 z-40 w-full overflow-y-auto bg-white px-6 py-6'>
+        <Dialog.Panel className='fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-6 py-6'>
           <div className='flex items-center justify-between'>
             <div className='flex flex-1'>
               <button
@@ -98,7 +98,7 @@ export default function Header() {
               </button>
             </div>
             <a href='#' className='-m-1.5 p-1.5'>
-              <span className='sr-only'>Your Company</span>
+              <span className='sr-only'>Kevin Poppe</span>
               <Image
                 height={70}
                 width={40}
@@ -114,6 +114,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
                 className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
               >
                 {item.name}
@@ -123,6 +124,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
                 className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
               >
                 {item.name}
