@@ -129,7 +129,7 @@ export default function Hero({ lang }: { lang: HeroType }) {
       </div>
       <ScrollDownButtonHero />
 
-      <div className='w-full bg-white h-36 sm:h-24 absolute z-40 -bottom-10' />
+      <div className='w-full bg-white h-40 sm:h-24 absolute z-40 md:-bottom-6' />
     </>
   );
 }
