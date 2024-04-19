@@ -26,7 +26,7 @@ export default function Footer({ lang }: { lang: SocialsType }) {
           <span className='h-4 hidden sm:block border-l border-brand-light-blue' />
           <Link
             className='text-center text-xs leading-5 text-brand-light-blue hover:text-brand-light-blue-hover flex items-center gap-1'
-            href='/'
+            href='/impressum'
           >
             Impressum
           </Link>
