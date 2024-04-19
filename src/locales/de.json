@@ -1,7 +1,7 @@
 {
   "hero": {
     "contact-cta": "Get in touch",
-    "title": ["Kevin Poppe", "Web-Developer"],
+    "title": ["Kevin Poppe", "Webentwickler"],
     "slogan": "Programmieren aus Leidenschaft - Für Anwendungen, die mehr bewegen"
   },
   "about-me": {
@@ -96,7 +96,7 @@
     "education": [
       {
         "company": "WBS Coding School Berlin",
-        "position": "Web Developer (Fullstack Web- & Appentwickler)",
+        "position": "Webentwickler (Fullstack Web- & Appentwickler)",
         "date": "2021 - 2022",
         "icon": "graduation",
         "description": [

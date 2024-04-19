@@ -11,12 +11,12 @@ import de from '@/locales/de.json';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Kevin Poppe | Web Developer',
+  title: 'Kevin Poppe | Webentwickler',
   description:
     'Kevin Poppe | Leidenschaftlicher Webentwickler mit Fokus auf NextJS und TypeScript. Ich erschaffe sauberen, reaktionsstarken Code und entwickle hochperformante Webanwendungen.',
   keywords: [
-    'Fullstack Developer',
-    'Frontend Developer',
+    'Fullstack Entwickler',
+    'Frontend Entwickler',
     'Webentwickler',
     'ReactJS',
     'TypeScript',
@@ -34,13 +34,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'Kevin Poppe' }],
   robots: 'index, follow',
 
-  // Open Graph
   openGraph: {
     type: 'website',
     locale: 'de_DE',
     url: 'https://kevinpoppe.com',
     siteName: 'Kevin Poppe',
-    title: 'Kevin Poppe | Web Developer',
+    title: 'Kevin Poppe | Webentwickler',
     description:
       'Kevin Poppe | Leidenschaftlicher Webentwickler mit Fokus auf NextJS und TypeScript. Ich erschaffe sauberen, reaktionsstarken Code und entwickle hochperformante Webanwendungen.',
     images: [
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
         url: 'https://kevinpoppe.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Kevin Poppe | Web Developer',
+        alt: 'Kevin Poppe | Webentwickler',
       },
     ],
   },
