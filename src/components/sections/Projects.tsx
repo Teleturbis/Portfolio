@@ -5,9 +5,20 @@ import { CommandLineIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import TextToSpeechButton from '../buttons/TextToSpeechButton';
+
 import type { ProjectsType } from '@/locales/types';
 
 export default function Projects({ lang }: { lang: ProjectsType }) {
+  const textToSpeech = lang.projects.map(
+    (project) =>
+      project.title +
+      '\n\nTechnologien:' +
+      project.type +
+      '\n\n' +
+      project.description.join('\n\n')
+  );
+
   return (
     <div className='py-24 sm:py-32 bg-brand-mint/25' id='Projects'>
       <div className='max-w-7xl mx-auto'>
@@ -23,14 +34,21 @@ export default function Projects({ lang }: { lang: ProjectsType }) {
               key={index}
               className='overflow-hidden rounded-xl border border-gray-200 bg-white p-6 flex flex-col gap-4 h-full'
             >
-              <div className='flex xs:items-center gap-x-4 border-b border-gray-900/5'>
-                <CommandLineIcon
-                  className='h-10 w-10 min-w-5'
-                  aria-hidden='true'
+              <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-900/5'>
+                <div className='flex xs:items-center justify-between gap-4'>
+                  <CommandLineIcon
+                    className='h-10 w-10 min-w-5'
+                    aria-hidden='true'
+                  />
+                  <p className='font-semibold leading-6 text-gray-900'>
+                    {project.title}
+                  </p>
+                </div>
+
+                <TextToSpeechButton
+                  text={textToSpeech[index]}
+                  variant='small'
                 />
-                <p className='font-semibold leading-6 text-gray-900'>
-                  {project.title}
-                </p>
               </div>
 
               <div className='flex flex-col gap-y-4 justify-between h-full'>
@@ -51,17 +69,19 @@ export default function Projects({ lang }: { lang: ProjectsType }) {
 
                 {project.images && project.images.length > 0 && (
                   <div className='grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2 bg-brand-mint p-2 rounded-md justify-between'>
-                    {project.images.map((image: string, index: number) => (
-                      <Link key={index} href={image} target='_blank'>
-                        <Image
-                          src={image}
-                          alt={image}
-                          width={250}
-                          height={125}
-                          className='opacity-75 hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer rounded-sm w-full h-auto'
-                        />
-                      </Link>
-                    ))}
+                    {project.images.map(
+                      (image: { src: string; alt: string }, index: number) => (
+                        <Link key={index} href={image.src} target='_blank'>
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            width={250}
+                            height={125}
+                            className='opacity-75 hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer rounded-sm w-full h-auto'
+                          />
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>

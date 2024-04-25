@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'media',
   theme: {
     extend: {
       backgroundImage: {
@@ -30,6 +31,19 @@ const config: Config = {
           'mint-hover': '#8ebdb5', // Hover für Mint
           text: '#333333', // Textfarbe
         },
+      },
+      dark: {
+        light: '#2c6f7f', // Dunklere Version von Light
+        'light-hover': '#245a67',
+        dark: '#000', // Dunklere Version von Dark
+        'dark-hover': '#061d23',
+        gray: '#1A202C', // Dunklere Version von Gray
+        'gray-hover': '#2d3748',
+        'light-blue': '#97b1b8', // Dunklere Version von Light Blue
+        'light-blue-hover': '#8097a1',
+        mint: '#5b8f8d', // Dunklere Version von Mint
+        'mint-hover': '#4d7673',
+        text: '#E2E8F0', // Helle Textfarbe für Dark Mode
       },
       screens: {
         xs: '375px',

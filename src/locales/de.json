@@ -23,32 +23,32 @@
     "icons": [
       {
         "icon": "/socialicons/github.svg",
-        "alt": "GitHub",
+        "alt": "GitHub Link",
         "url": "https://github.com/Teleturbis"
       },
       {
         "icon": "/socialicons/linkedin.svg",
-        "alt": "LinkedIn",
+        "alt": "LinkedIn Link",
         "url": "https://www.linkedin.com/in/poppe-kevin/"
       },
       {
         "icon": "/socialicons/instagram.svg",
-        "alt": "Instagram",
+        "alt": "Instagram Link",
         "url": "https://www.instagram.com/teleturbis"
       },
       {
         "icon": "/socialicons/threads.svg",
-        "alt": "Threads",
+        "alt": "Threads Link",
         "url": "https://www.threads.net/@teleturbis"
       },
       {
         "icon": "/socialicons/whatsapp.svg",
-        "alt": "WhatsApp",
+        "alt": "WhatsApp Link",
         "url": "https://wa.me/16091118502"
       },
       {
         "icon": "/socialicons/email.svg",
-        "alt": "Email",
+        "alt": "Email Link",
         "url": "kevin.poppe93@gmail.com"
       }
     ]
@@ -132,10 +132,22 @@
           "🌟 Streben nach Clean Code und herausragender Performance, um schnelle Ladezeiten und eine reibungslose Navigation zu gewährleisten"
         ],
         "images": [
-          "/stang/home.png",
-          "/stang/glossar.png",
-          "/stang/calendar.png",
-          "/stang/contact.png"
+          {
+            "src": "/stang/home.png",
+            "alt": "Versicherungen Stang Screenshot Startseite"
+          },
+          {
+            "src": "/stang/glossar.png",
+            "alt": "Versicherungen Stang Screenshot Glossar"
+          },
+          {
+            "src": "/stang/calendar.png",
+            "alt": "Versicherungen Stang Screenshot Terminkalender"
+          },
+          {
+            "src": "/stang/contact.png",
+            "alt": "Versicherungen Stang Screenshot Kontakt"
+          }
         ]
       },
       {
@@ -156,10 +168,22 @@
           "🌟 Fokus auf Effizienz und Anpassungsfähigkeit, wobei das CMS speziell auf die Bedürfnisse eines Versicherungsmaklers zugeschnitten ist, um die Pflege von Fachbegriffen und die Content-Aktualisierung zu vereinfachen"
         ],
         "images": [
-          "/stang/cms/uebersicht.png",
-          "/stang/cms/blog.png",
-          "/stang/cms/images.png",
-          "/stang/cms/person.png"
+          {
+            "src": "/stang/cms/uebersicht.png",
+            "alt": "Versicherungen Stang CMS Screenshot Übersicht"
+          },
+          {
+            "src": "/stang/cms/blog.png",
+            "alt": "Versicherungen Stang CMS Screenshot Blog erstellen"
+          },
+          {
+            "src": "/stang/cms/images.png",
+            "alt": "Versicherungen Stang CMS Screenshot Bildermanagment"
+          },
+          {
+            "src": "/stang/cms/person.png",
+            "alt": "Versicherungen Stang CMS Screenshot Persönliche Infos bearbeiten"
+          }
         ]
       },
       {
@@ -167,10 +191,15 @@
         "type": "ReactJS, NextJS, TailwindCSS, ExpressJS, Nodemailer, JWT",
         "description": [
           "🚀 Entwicklung eines Rechnungserstellungssystems für einfaches Management von Geschäftstransaktionen - Realisiert als Next.js-Projekt mit Tailwind CSS, um Benutzerfreundlichkeit und ansprechendes Design zu gewährleisten",
-          "🛠️ Backend-Funktionalität mit Express.js und JWT - Sicherstellt eine zuverlässige Datenverarbeitung und Authentifizierung. Automatisierte Erstellung und Versand von PDF-Rechnungen via Nodemailer, mit optionalen Zahlungszielen und automatischer MwSt.-Berechnung",
+          "🛠️ Backend-Funktionalität mit Express.js und JWT - Stellt eine zuverlässige Datenverarbeitung und Authentifizierung sicher. Automatisierte Erstellung und Versand von PDF-Rechnungen via Nodemailer, mit optionalen Zahlungszielen und automatischer MwSt.-Berechnung",
           "🌟 Dynamische und skalierbare Lösung - Fortlaufende Erweiterungen und Optimierungen unterstützen das Wachstum und die Anpassungsfähigkeit des Systems, um den sich ändernden Anforderungen des Geschäftsalltags gerecht zu werden"
         ],
-        "images": ["/rechnungen-erstellen/loggedin.png"]
+        "images": [
+          {
+            "src": "/rechnungen-erstellen/loggedin.png",
+            "alt": "Rechnungen einfach erstellen & versenden Screenshot Dashboard"
+          }
+        ]
       }
     ]
   }

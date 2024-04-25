@@ -1,6 +1,10 @@
+'use client';
+
 import clsx from 'clsx';
 import Image from 'next/image';
 import React from 'react';
+
+import TextToSpeechButton from '../buttons/TextToSpeechButton';
 
 import type { AboutMeType } from '@/locales/types';
 
@@ -13,6 +17,19 @@ const stats: {
 ];
 
 export default function AboutMe({ lang }: { lang: AboutMeType }) {
+  const textToSpeech =
+    lang.title +
+    '\n\n' +
+    lang.description.join(' ') +
+    '\n\nFunfacts:\n' +
+    lang.stats.code +
+    ' ' +
+    stats[0].value +
+    '\n' +
+    lang.stats.energy +
+    ' ' +
+    stats[1].value;
+
   return (
     <div className='bg-brand-mint/25' id='AboutMe'>
       <div className='py-24 sm:pb-32 md:pt-56'>
@@ -20,9 +37,13 @@ export default function AboutMe({ lang }: { lang: AboutMeType }) {
           <div className='mx-auto max-w-2xl items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none flex flex-col lg:flex-row-reverse lg:justify-between'>
             <div>
               <div className='text-base leading-7 text-gray-700 lg:max-w-lg'>
-                <h3 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-                  {lang.title}
-                </h3>
+                <div className='flex flex-col sm:flex-row gap-4 sm:items-center justify-between'>
+                  <h3 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+                    {lang.title}
+                  </h3>
+                  <TextToSpeechButton text={textToSpeech} />
+                </div>
+
                 <div className='max-w-xl'>
                   {lang.description.map((paragraph: string, index: number) => (
                     <p

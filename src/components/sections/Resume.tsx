@@ -7,6 +7,8 @@ import {
   AcademicCapIcon,
 } from '@heroicons/react/24/outline';
 
+import TextToSpeechButton from '../buttons/TextToSpeechButton';
+
 import type { ResumeType } from '@/locales/types';
 
 export default function Resume({ lang }: { lang: ResumeType }) {
@@ -26,7 +28,7 @@ export default function Resume({ lang }: { lang: ResumeType }) {
                 key={index}
                 className='rounded-xl border border-gray-200 bg-white p-6 flex flex-col gap-4 h-full'
               >
-                <div className='grid grid-cols-12 items-center gap-x-4 border-b border-gray-900/5'>
+                <div className='grid grid-cols-12 items-center gap-4 border-b border-gray-900/5'>
                   {position.icon === 'dev' ? (
                     <CommandLineIcon
                       className='h-10 w-10 col-span-2'
@@ -38,7 +40,7 @@ export default function Resume({ lang }: { lang: ResumeType }) {
                       aria-hidden='true'
                     />
                   )}
-                  <div className='col-span-10'>
+                  <div className='col-span-10 sm:col-span-6'>
                     <p className='font-semibold leading-6 text-gray-900'>
                       {position.company}
                     </p>
@@ -49,6 +51,19 @@ export default function Resume({ lang }: { lang: ResumeType }) {
                       <p className='text-gray-500'>{position.date}</p>
                     </div>
                   </div>
+                  <TextToSpeechButton
+                    text={
+                      position.company +
+                      '\n\n' +
+                      position.position +
+                      '\n\n' +
+                      position.date +
+                      '\n\n' +
+                      position.description.join('\n\n')
+                    }
+                    variant='small'
+                    className='col-span-12 sm:col-span-4'
+                  />
                 </div>
 
                 <div className='flex flex-col gap-y-4'>
@@ -72,12 +87,12 @@ export default function Resume({ lang }: { lang: ResumeType }) {
                 key={index}
                 className='overflow-hidden rounded-xl border border-gray-200 bg-white p-6 flex flex-col gap-4 h-full'
               >
-                <div className='grid grid-cols-12 items-center gap-x-4 border-b border-gray-900/5'>
+                <div className='grid grid-cols-12 items-center gap-4 border-b border-gray-900/5'>
                   <AcademicCapIcon
                     className='h-10 w-10 col-span-2'
                     aria-hidden='true'
                   />
-                  <div className='col-span-10'>
+                  <div className='col-span-10 sm:col-span-6'>
                     <p className='font-semibold leading-6 text-gray-900'>
                       {position.company}
                     </p>
@@ -88,6 +103,19 @@ export default function Resume({ lang }: { lang: ResumeType }) {
                       <p className='text-gray-500'>{position.date}</p>
                     </div>
                   </div>
+                  <TextToSpeechButton
+                    text={
+                      position.company +
+                      '\n\n' +
+                      position.position +
+                      '\n\n' +
+                      position.date +
+                      '\n\n' +
+                      position.description.join('\n\n')
+                    }
+                    variant='small'
+                    className='col-span-12 sm:col-span-4'
+                  />
                 </div>
 
                 <div className='flex flex-col gap-y-4'>
