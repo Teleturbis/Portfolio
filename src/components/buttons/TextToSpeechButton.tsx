@@ -39,7 +39,7 @@ export default function TextToSpeechButton({
     <button
       className={clsx(
         className,
-        'inline-flex justify-between items-center border border-transparent font-medium rounded-md shadow-sm text-white bg-brand-light hover:bg-brand-mint-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-mint-dark',
+        'inline-flex justify-between items-center border border-transparent font-medium rounded-md shadow-sm text-white bg-brand-dark hover:bg-brand-mint-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-mint-dark',
         {
           'px-6 py-3 text-base': variant === 'base',
           'px-2.5 py-1.5 text-sm': variant === 'small',

@@ -18,6 +18,7 @@ export type SocialsType = {
   icons: {
     icon: string;
     alt: string;
+    title: string;
     url: string;
   }[];
 };

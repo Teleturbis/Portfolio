@@ -25,7 +25,7 @@ export default function SocialsSection({ lang }: { lang: SocialsType }) {
               />
               <span className='flex items-center gap-1'>
                 <p className='text-center font-semibold text-brand-text'>
-                  {item.alt}
+                  {item.title}
                 </p>
                 <ArrowTopRightOnSquareIcon className='w-4 h-4 text-brand-text' />
               </span>

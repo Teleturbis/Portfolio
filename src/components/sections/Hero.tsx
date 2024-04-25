@@ -6,6 +6,7 @@ import ScrollDownButtonHero from '@/components/buttons/ScrollDownButtonHero';
 import { usePathname } from 'next/navigation';
 
 import type { HeroType } from '@/locales/types';
+import Link from 'next/link';
 
 export default function Hero({ lang }: { lang: HeroType }) {
   const pathname = usePathname();
@@ -67,12 +68,12 @@ export default function Hero({ lang }: { lang: HeroType }) {
                   {lang.slogan}
                 </p>
                 <div className='mt-10 flex items-center gap-x-6'>
-                  <a
+                  <Link
                     href='#Socials'
-                    className='rounded-md hidden lg:block bg-brand-light px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-light-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                    className='rounded-md hidden lg:block bg-brand-dark px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-light-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                   >
                     {lang['contact-cta']}
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='mx-auto mt-16 flex w-1/2 max-w-2xl sm:ml-10 sm:mr-0 sm:mt-0 sm:max-w-none sm:flex-none xl:ml-32'>

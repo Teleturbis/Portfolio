@@ -24,31 +24,37 @@
       {
         "icon": "/socialicons/github.svg",
         "alt": "GitHub Link",
+        "title": "GitHub",
         "url": "https://github.com/Teleturbis"
       },
       {
         "icon": "/socialicons/linkedin.svg",
         "alt": "LinkedIn Link",
+        "title": "LinkedIn",
         "url": "https://www.linkedin.com/in/poppe-kevin/"
       },
       {
         "icon": "/socialicons/instagram.svg",
         "alt": "Instagram Link",
+        "title": "Instagram",
         "url": "https://www.instagram.com/teleturbis"
       },
       {
         "icon": "/socialicons/threads.svg",
         "alt": "Threads Link",
+        "title": "Threads",
         "url": "https://www.threads.net/@teleturbis"
       },
       {
         "icon": "/socialicons/whatsapp.svg",
         "alt": "WhatsApp Link",
+        "title": "WhatsApp",
         "url": "https://wa.me/16091118502"
       },
       {
         "icon": "/socialicons/email.svg",
         "alt": "Email Link",
+        "title": "Email",
         "url": "kevin.poppe93@gmail.com"
       }
     ]
