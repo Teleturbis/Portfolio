@@ -46,6 +46,7 @@ export default function TextToSpeechButton({
         }
       )}
       onClick={run}
+      aria-label='Text vorlesen'
     >
       Text vorlesen
       {speechRunning ? (
